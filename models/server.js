@@ -25,7 +25,7 @@ class Server{
         //lectura y parseo del body
         this.app.use(express.json())
         //DIRECOTORIO PUBLICO
-     this.app.use( express.static(__dirname + '/public'));   
+        this.app.use( express.static('public'));   
     }
 
     routes(){

@@ -9,8 +9,9 @@ class Server{
         this.app  = express ();
     
         this.port = process.env.PORT;
-        this.authPath = '/api/auth'
+      
         this.usuariosPath='/api/users'
+        this.authPath = '/api/auth'
         this.conectarDB();
 
         //Middlewars
@@ -38,7 +39,7 @@ class Server{
      this.app.use(this.usuariosPath, require('../routes/user'));
     }
     listen(){
-        this.app.listen(process.env.PORT, ()=>{
+        this.app.listen(this.port, ()=>{
             console.log('Servidor corriendo en puerto', this.port);
         });
     }

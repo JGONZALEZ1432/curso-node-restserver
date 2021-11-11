@@ -9,14 +9,16 @@ const {
 } = require('../middlewares')
 
 
+const { esRoleValido,emailExiste,existeUsuarioPorId } = require('../helpers/db-validator');
+
+
+
 
 const { userGet, 
     userPut, 
     userPost, 
     userDelete, 
     userPatch } = require('../controllers/user');
-const { esRoleValido,emailExiste,existeUsuarioPorId } = require('../helpers/db-validator');
-
 
 
 
